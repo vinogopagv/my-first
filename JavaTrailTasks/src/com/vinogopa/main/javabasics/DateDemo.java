@@ -16,10 +16,13 @@ public class DateDemo {
 		boolean done = false;
 		
 		for(int cycle = 1;cycle <= cycles;cycle++) {
+			
 			Calendar cal1 = demo.getCalendarObj();
 			cal1.add(Calendar.DATE,84*cycle);
+			
 			String cycleDate = sdf.format(cal1.getTime());
 			System.out.println("cycle NO : "+cycle+" end in "+cycleDate);
+			
 			if(!done && date.before(cal1.getTime())){
 				System.out.println("Current Date : "+sdf.format(date));
 				System.out.println("You are now in Cycle :"+cycle);
@@ -27,7 +30,10 @@ public class DateDemo {
 			}
 		}
 	}
-
+	/**
+	 * produces calendar instance with specified value
+	 * @return
+	 */
 	protected Calendar getCalendarObj() {
 		Calendar cal1 = Calendar.getInstance();
 		cal1.set(2020, 0, 1);

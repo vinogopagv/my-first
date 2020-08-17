@@ -12,6 +12,7 @@ public class AmstrongNumber {
 		System.out.println("Enter the number:");
 		int givenData = sc.nextInt();
 		n = givenData;
+		
 		//Armstrong number
 		while(n > 0) {
 			r = n % 10;
