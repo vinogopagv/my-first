@@ -10,6 +10,10 @@ public class StarTriangle {
 		System.out.println("Enter the No of Rows: ");
 		int rows = sc.nextInt();
 		
+		/**
+		 * Triangle Printing
+		 */
+		System.out.println("Triangle Printing");
 		for(int i =1;i<=rows;i++) {
 			for (int j = 1; j <= i; j++) {
 				System.out.print("*");
@@ -17,19 +21,34 @@ public class StarTriangle {
 			System.out.println("");
 		}
 		
-		for(int i =1;i<=rows;i++) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");
-			}
-			System.out.println("");
-		}
+		/**
+		 * Triangle(up down change) Printing
+		 */
 		
-		
+		System.out.println("\nTriangle 2 Printing\n");
 		for(int i =1;i <= rows;i++) {
 			for (int j = rows; j >= i; j--) {
 				System.out.print("*");
 			}
 			System.out.println("");
+		}
+		
+		
+		/**
+		 * Stair Case
+		 */
+		System.out.println("\nStair Case Printing");
+		for(int i =1;i <= rows;i++) {
+			for (int j = rows; j >= i; j--) {
+				if(j > i)	//reverse condition for reverse stair case
+					System.out.print(" ");
+				if(j==i)
+					for(int k =rows-j;k < rows ;k++) {
+						System.out.print("#");
+					}
+			}
+			if (i < rows) 
+				System.out.println("");
 		}
 
 	}
